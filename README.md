@@ -1,0 +1,1 @@
+# Course assignment template

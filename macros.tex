@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+% Set target color model to RGB
+\usepackage[a4paper, inner=2.0cm,outer=2.0cm,top=2.0cm,bottom=2.0cm]{geometry}
+%\usepackage{setspace}
+\usepackage[rgb]{xcolor}
+\usepackage{verbatim}
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{xurl}
+\usepackage{lipsum}
+\usepackage[colorlinks=true, urlcolor=blue,  linkcolor=blue, citecolor=blue]{hyperref}
+
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\usepackage[francais]{babel}
+
+\newcommand{\homework}[5]{
+   \pagestyle{myheadings}
+   \thispagestyle{plain}
+   \newpage
+   \setcounter{page}{1}
+   \noindent
+   \begin{center}
+   \framebox{
+      \vbox{\vspace{2mm}
+    \hbox to 6.28in { {\bf #3 \hfill {\small (#2)}} }
+       \vspace{6mm}
+       \hbox to 6.28in { {\Large \hfill #1 \hfill} }
+       \vspace{6mm}
+       \hbox to 6.28in { {\it Etudiant: {\rm #4}, \hfill matricule: {\rm #5}} }
+      \vspace{2mm}}
+   }
+   \end{center}
+   \markboth{#5 -- #1}{#5 -- #1}
+   \vspace*{4mm}
+}
+
+\newcommand{\codeword}[1]{%
+\texttt{\textcolor{blue}{#1}}%
+}
+\newcommand{\weblink}[1]{%
+\texttt{\textcolor{blue}{\underline{#1}}}%
+}
+
+\newtoks\student
+\newtoks\studentid
+\newtoks\course
+\newtoks\duedate
+\newtoks\assignmentname
+\newtoks\pdftitle
